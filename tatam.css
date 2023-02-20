@@ -1,0 +1,118 @@
+  @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins&display=swap');
+
+  /* body */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration:none;
+    text-transform: capitalize;
+    transform: all 0.2s linear;
+    font-family: 'Prompt', serif;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 0.5rem;
+    font-size: 66%;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    padding: 1rem 3%; 
+    background: #486AAE;
+    z-index: 1001;
+}
+
+/* tata logo */
+header .logo{
+    font-size: 2.8rem;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 5px;
+    font-family: 'Orbitron', sans-serif;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+/* -------------the anchor tags in navigation bar */
+header .nav-links{
+    width:55%;
+}
+header .nav-links a{
+    margin: 0 0.8rem;
+    font-size: 1.1rem;
+    padding: 1rem;
+    line-height: 10px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+header .nav-links a:hover{
+    color: black;
+    font-weight: bold;
+}
+header .fa-bars{
+    font-size: 2.1rem;
+    cursor: pointer;
+    display: none;
+    color: white;
+}
+
+
+
+/*  responsive nav bar */
+
+/* space between links when they are shrinked */
+@media screen and (max-width:1024px) {
+    header .navbar{
+        width:55%;
+        
+    }
+}
+
+/* for mobile perspective */
+@media screen and (max-width:768px) {
+    .logo{
+        margin-left: 30vw;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position:absolute;
+        right: 0;
+        height: 100vh;
+        font-size: 35px;
+        /* margin-bottom: 40px; */
+        top: 9.8vh;
+        background: #486AAE;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+       }
+      header .fa-bars{
+        display: block;
+        justify-content: space-around;
+      }
+}
+
+/* for the animation effect after clicking on the bars */
+.nav-active{
+    transform: translateX(0%);
+}
